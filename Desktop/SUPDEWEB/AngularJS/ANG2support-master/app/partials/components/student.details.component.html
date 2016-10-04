@@ -1,0 +1,13 @@
+<main id="editPage">
+    <section *ngIf="singleStudent" >
+
+        <!-- Binding de l'événement click -->
+        <h3><strong>{{edit}}</strong> {{singleStudent.firstName}} {{singleStudent.lastName}} <button (click)="delete(singleStudent.id)">{{deleteBtn}}</button></h3>
+        
+        <ul>
+            <li><label>{{firstName}}</label> <input [(ngModel)]="singleStudent.firstName"/></li>
+            <li><label>{{lastName}}</label> <input [(ngModel)]="singleStudent.lastName"/></li>
+        </ul>
+        <p class="textAlignRight"><button (click)="save()">{{saveBtn}}</button> <button (click)="goBack()">{{backBtn}}</button></p>
+    </section>
+</main>
